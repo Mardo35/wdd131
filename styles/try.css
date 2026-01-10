@@ -1,0 +1,216 @@
+:root{
+    --header-footer: #4169E1;	
+    --main-content:#f8f9fa;
+    --text:#333;
+    --background:#ffb7c5;
+    --background-hover:#ff69b4;
+ 
+}
+
+/* Font for the Body and Css Reset */
+body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: lato, sans-serif;
+}
+
+/* Styling the header */
+
+#course-title{
+    text-align: center;
+    display: block;
+    background-color: var(--header-footer);
+    padding:2.5rem;
+}
+
+/* Styling the Navigation Menu */
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap:wrap;
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+
+nav ul li{
+    flex: 1 0 auto;
+    display: block;
+}
+
+nav a{
+    display: block;
+    padding:1.5rem;
+    text-decoration: none;
+    background-color: var(--background);
+    color:var(--main-content)
+}
+
+nav a:hover{
+    background-color:var(--background-hover);
+    box-shadow: 3px 5px 15px var(--header-footer);
+}
+
+/* Styling the Body */
+
+/* Setting the width of the body */
+
+/*  h1 with Full name center */
+.full-name{
+    display: block;
+    text-align: center;
+}
+
+/* Styling the images */
+.me{
+    width:250px;
+    height:300px;
+    display: inline;
+}
+
+/* Styling the headings inside main */
+
+main h2, h3{
+    display: block;
+    text-align: center;
+}
+
+h2{
+    background-color: var(--header-footer);
+    color: var(--main-content);
+    padding: 1px;
+    margin:0;
+}
+
+main h3{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* Styling the main section of the website */
+
+main{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+    gap: 10px;
+    margin: 0 20px 0 20px;
+}
+
+.full-name {
+        grid-column: 1 / -1;        
+        text-align: center;
+}
+
+.card{
+    border: 1px solid var(--text);
+    border-radius: 3px;
+}
+
+/* First Card with my picture */
+
+.left-card{
+    height: 100vh;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    align-items: center; 
+}
+
+.about-content p{
+    font-size: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 15px;
+}
+.me {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* second card with Haiti's Flag */
+.haiti-content{
+    display: grid;    
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px;
+    align-items: center;
+}
+
+.haiti-content figure {
+    grid-column: 1;
+    /* margin: 0; */
+}
+
+.haiti-content p {
+    grid-column: 2;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+}
+
+.haiti-content img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc; 
+}
+
+.haiti-content figure figcaption{
+    text-align: center;
+}
+
+/* Card with Web Resources */
+.right-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.right-card ul{
+    height: 89.5vh;
+    
+}
+
+.right-card ul li{
+    margin-top: 50px;
+}
+
+.right-card a{
+    text-decoration: none;
+}
+
+.right-card a:hover{
+    text-decoration: underline;
+}
+/* Styling the footer */
+
+footer{
+    text-align: center;
+    background-color: var(--header-footer);
+    padding: 1rem;
+    margin-top:10px;
+}
+.copyright{
+    text-align: center;
+    color: var(--main-content);   
+    margin-bottom: 0;   
+
+}
+
+.date{
+    display: inline;
+    margin: 0;
+}
+
+#lastModified{
+    text-align: center;
+    display: inline;
+    margin: 0;
+}
