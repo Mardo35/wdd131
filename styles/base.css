@@ -7,7 +7,7 @@
 :root {
     --header-footer: #4169E1;   
     --main-content: #f8f9fa;
-    --text: #000;
+    --text: #333;
     --background: #ffb7c5;
     --background-hover: #ff69b4;
 }
@@ -26,7 +26,7 @@ body {
     text-align: center;
     background-color: var(--header-footer);
     padding: 2.5rem;
-    color: var(--text);
+    color: var(--main-content);
     display: block;
 }
 header{
@@ -49,8 +49,8 @@ nav a {
     display: block;
     padding: 1.5rem;
     text-decoration: none;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--text);
+    color: var(--main-content);
     text-align: center;
 }
 
@@ -96,7 +96,7 @@ main h2, main h3 {
 
 h2 {
     background-color: var(--header-footer);
-    color: var(--text);
+    color: var(--main-content);
     padding: 10px;
     margin: 0;
 }
@@ -170,7 +170,7 @@ footer {
     text-align: center;
     background-color: var(--header-footer);
     padding: 1.5rem;
-    color: var(--text);
+    color: var(--main-content);
     margin-top: 20px;
 }
 
