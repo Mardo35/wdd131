@@ -26,11 +26,14 @@ body {
     text-align: center;
     background-color: var(--header-footer);
     padding: 2.5rem;
-    color: var(--main-content);
+    color: var(--text);
     display: block;
 }
+header{
+    padding: 0;
+}
 
-nav ul {
+header nav ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +50,7 @@ nav a {
     padding: 1.5rem;
     text-decoration: none;
     background-color: var(--background);
-    color: var(--main-content);
+    color: var(--text);
     text-align: center;
 }
 
@@ -93,7 +96,7 @@ main h2, main h3 {
 
 h2 {
     background-color: var(--header-footer);
-    color: var(--main-content);
+    color: var(--text);
     padding: 10px;
     margin: 0;
 }
@@ -167,7 +170,7 @@ footer {
     text-align: center;
     background-color: var(--header-footer);
     padding: 1.5rem;
-    color: var(--main-content);
+    color: var(--text);
     margin-top: 20px;
 }
 
