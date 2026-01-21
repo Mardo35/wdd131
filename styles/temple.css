@@ -27,7 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: var(--header-footer);
     padding: 2rem;
 }
@@ -103,7 +102,6 @@ main img{
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #333;
         padding: 0;
         margin-top: 10px;
     }
@@ -121,7 +119,7 @@ main img{
         display: flex; /* Show the navigation menu when toggled */
         align-self: center;
         justify-content: center;
-        background-color: var(--header-footer);
+        /* background-color: var(--header-footer); */
         margin: 0 auto;
 
     }
