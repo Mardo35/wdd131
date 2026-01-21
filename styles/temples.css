@@ -16,7 +16,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'roboto', sans-serif;
+    font-family: 'sato', sans-serif;
     color: var(--text);
     line-height: 1.6;
 }
@@ -52,7 +52,8 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--text)
+    text-decoration: underline;
+    font-size: large;
 }
 
 /* Styling the body with the 9 Temples */
