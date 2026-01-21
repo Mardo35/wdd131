@@ -28,11 +28,11 @@ header {
     align-items: center;
     background-color: var(--header-footer);
     padding: 2rem;
+    color: var(--main-content);
 }
 
 header p{
     font-weight: bold;
-    color: var(--main-content);
 }
 
 nav ul {
@@ -120,6 +120,7 @@ main img{
         align-self: center;
         justify-content: center;
         margin: 0 auto;
+
 
     }
 
