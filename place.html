@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the country page for the WDD131-Dynamic Web fundamentals course, #BYU #WDD131">
+    <meta name="author" content="Baguidy Mardochee">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Forum&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Country Page</title>
+</head>
+<body>
+
+    <header> 
+        <h1>Brazil</h1>
+    </header>
+
+    <main>
+        <div class="hero"> 
+            <picture>
+                <source media="(min-width: 801px)" srcset="images/brazilplaces.webp">
+                
+                <img src="images/christtheredempter.webp" alt="Iconic views of Brazil">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+            <div class="data-container">
+           <p><span class="label">Area:</span><span class="value">8,515,767 sq km</span></p>
+           <p><span class="label">Population:</span> <span class="value">214.1 million</span></p>
+           <p><span class="label">Capital:</span> <span class="value">Brasilia</span></p>
+           <p><span class="label">Currency:</span> <span class="value">Brazilian Real</span></p>
+           <p><span class="label">Time Zone:</span> <span class="value">UTC-3</span></p>
+           <p><span class="label">Calling Code:</span> <span class="value">+55</span></p>
+          <p><span class="label">Internet TLD:</span> <span class="value">.br</span></p>
+         </div>
+            
+        </section>
+
+        <section class="weather">
+        <h2>Weather <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="weather-icon">
+        <path d="M12 2v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="M20 12h2"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+        <path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"></path>
+        <path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"></path>
+        </svg></h2>            
+        <div class="weather-container">
+        <p><span class="label">Temperature:</span> <span class="value" id="temperature">10 °C</span></p>
+        <p><span class="label">Conditions:</span> <span class="value" id="conditions">Partly Cloudy</span></p>
+        <p><span class="label">Wind:</span> <span class="value" id="wind">5 km/h</span></p>
+        <p><span class="label">Wind Chill:</span> <span class="value" id="wind-chill"></span></p>
+        </div>
+        </section>
+
+    </main>
+    <footer>
+        <p class="copyright">&copy;<span id="currentyear"></span> &#x1f468;&#x200d;&#x1f4bb; Baguidy Mardochee &#x1f468;&#x200d;&#x1f4bb; Port-au-Prince, Haiti</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
