@@ -159,6 +159,7 @@ header h1{
 
 /* Pseudo element */
 
+
 .weather-emoji {
     display: inline-block; /* Shows the emoji on desktop */
     margin-left: 10px;
