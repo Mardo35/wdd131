@@ -1,0 +1,53 @@
+@media (min-width: 769px) {
+    #temple-cards {
+        display: grid;
+        /* Three equal columns */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px 20px; 
+        padding: 20px;
+        justify-items: center;
+    }
+
+    /* Target the individual temple section/card */
+    #temple-cards section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        
+        
+        width: 100%;       
+        height: 450px;     
+        
+        background-color: var(--card-bg, #fff);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        
+    
+        justify-content: space-between; 
+    }
+
+    /* Keep text together at the top */
+    #temple-cards h3, 
+    #temple-cards p {
+        margin: 5px 0;
+    }
+
+    /* Uniform Image sizing */
+    #temple-cards img {
+        width: 250px;      
+        height: 200px; 
+        object-fit: cover; 
+        border-radius: 4px;
+        flex-shrink: 0; 
+    }
+
+    /* Ensure the Heading spans all three columns */
+    main h1 {
+        grid-column: 1 / -1; 
+        text-align: center;
+        margin: 1.5rem 0;
+        font-size: 2.5rem;
+    }
+}
