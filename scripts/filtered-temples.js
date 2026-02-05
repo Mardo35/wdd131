@@ -100,6 +100,7 @@ const temples = [
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-83166-wallpaper.jpg"
   },
 
+
   {
     templeName: "Paris France",
     location: "Le Chesnay, France",
