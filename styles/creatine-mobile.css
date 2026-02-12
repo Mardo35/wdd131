@@ -1,0 +1,249 @@
+/* Global Reset & Settings */
+/*  fromhttps://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+
+:root {
+    --header-footer:  #222;
+    --main-content: #f8f9fa;
+    --text: #333;
+    --background: #ffb7c5;
+    --background-hover: #ff69b4;
+}
+
+/* styling for the body */
+body {
+    font-family: 'cormorant';
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden
+
+}
+
+/* Styling the header */
+
+header {
+    background-color: var(--header-footer);
+    color: var(--main-content);
+    width: 100%;
+    padding: 1.5rem;
+
+}
+
+/* 3. The Nav is the Flex Container */
+nav.list {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;           
+    padding: 10px 40px;
+}
+
+/* 4. Style the Logo/Text */
+nav.list p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 5. Style the Link List */
+nav.list ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; 
+}
+
+nav.list ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 1.5rem;
+}
+
+/* Hover Effect */
+nav.list ul li a:hover {
+    color: #00d4ff; 
+}
+
+/* 1. Desktop Layout (Default) */
+nav.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+nav.list ul {
+    display: flex; 
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Desktop  */
+
+nav.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+/* Ensure links are a row on desktop */
+nav.list ul {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo text is always visible on desktop */
+nav.list p {
+    display: block !important; 
+    margin: 0;
+}
+
+/* Hide hamburger on desktop */
+.hamburger-btn {
+    display: none; 
+}
+
+/* 2. Mobile Styles (Only for screens 768px and below) */
+
+@media (max-width: 768px) {
+    nav.list {
+        flex-wrap: wrap; 
+        padding: 15px 20px;
+    }
+
+    /* Logic for the "Optimal Health" text visibility */
+    nav.list p.hide-text {
+        display: none !important;
+    }
+
+    /* Mobile menu resets */
+    nav.list ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        order: 3; /* Move below logo and button */
+    }
+
+    /* Class added by JavaScript to show the menu */
+    nav.list ul.show {
+        display: flex;
+    }
+
+    /* Show the hamburger button only on mobile */
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+    }
+}
+
+/* styling the image */
+.creatine-image {
+    width: 100%;       
+    overflow: hidden;  
+    line-height: 0;   
+}
+
+.creatine-image img {
+    width: 100%;       
+    height: 650px;     
+    display: block;    
+    object-fit: cover; 
+}
+
+/* centered the main section with the texts */
+main {
+    width: 90%;       /* Takes up 90% of the screen on mobile */
+    max-width: 500px; /* Won't grow larger than 500px on desktop */
+    margin: 0 auto;   /* Keeps it centered */
+}
+.main-text{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* shrink the text */
+@media (max-width: 768px) {
+    .main-text {
+        font-size: 1.8rem; 
+    }
+}
+
+/* image too long on small screen */
+@media (max-width: 768px) {
+    .creatine-image img {
+        height: 300px; /* Reduced height for better mobile viewing */
+    }
+}
+
+
+main {
+  text-align: left; 
+
+}
+
+h1,h2, p {
+  margin-left: 0;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling the footer */
+
+footer {
+    text-align: center;
+    background-color: var(--header-footer);
+    padding:1.5rem;
+    color: var(--main-content);
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.date, #lastModified {
+    display: inline; 
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
