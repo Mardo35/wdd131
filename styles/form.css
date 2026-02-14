@@ -1,0 +1,171 @@
+/* 1. Global Reset & Layout Strategy */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Header (Independent Block) */
+header {
+    width: 100%;
+    max-width: 640px;
+    background-color: #2d0131; 
+    color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    /* Use Cormorant for the title */
+    font-family: 'Cormorant', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* 3. Main Content Container (The Form Block) */
+main {
+    width: 100%;
+    max-width: 640px; 
+    background-color: #d1cbd6; 
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 4. Form Field Styling */
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.rating-container, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rating-container label, 
+.checkbox-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* 5. Submit Button */
+input[type="submit"] {
+    background-color: #f0f0f0;
+    color: #2d0131;
+    border: 1px solid #2d0131;
+    padding: 15px; 
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    display: block;
+    width: 100%; 
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2d0131;
+    color: white;
+}
+
+/* 6. Footer  */
+footer {
+    width: 100%;
+    max-width: 640px;
+    background-color: #2d0131;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: auto; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* 7. Responsiveness */
+@media (max-width: 660px) {
+    body {
+        padding: 10px;
+    }
+
+    header, main, footer {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .checkbox-group label {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+}

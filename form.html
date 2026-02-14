@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a product review form for WDD 131 Dynamic Web Fundamentals.">
+    <link rel="stylesheet" href="styles/form.css">
+    <meta name="author"content="Baguidy Mardochee">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Product Review Form</title>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            
+            <div class="form-section">
+                <label for="product-name">Product Name</label>
+                <select id="product-name" name="product-name" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+            </div>
+
+            <fieldset class="radio-group">
+                <legend>Overall Rating</legend>
+                <div class="rating-container">
+                    <label for="rate-1"><input type="radio" id="rate-1" name="rating" value="1" required> ☆</label>
+                    <label for="rate-2"><input type="radio" id="rate-2" name="rating" value="2"> ☆☆</label>
+                    <label for="rate-3"><input type="radio" id="rate-3" name="rating" value="3"> ☆☆☆</label>
+                    <label for="rate-4"><input type="radio" id="rate-4" name="rating" value="4"> ☆☆☆☆</label>
+                    <label for="rate-5"><input type="radio" id="rate-5" name="rating" value="5"> ☆☆☆☆☆</label>
+                </div>
+            </fieldset>
+
+            <div class="form-section">
+                <label for="install-date">Date of Installation</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <fieldset class="checkbox-group">
+                <legend>Which features did you find useful in the product? <br><em>(Check all that apply)</em></legend>
+                
+                <label for="feat-durability">
+                    <input type="checkbox" id="feat-durability" name="features" value="durability"> Durability
+                </label>
+                
+                <label for="feat-ease">
+                    <input type="checkbox" id="feat-ease" name="features" value="ease-of-use"> Ease of Use
+                </label>
+                
+                <label for="feat-performance">
+                    <input type="checkbox" id="feat-performance" name="features" value="performance"> Performance
+                </label>
+                
+                <label for="feat-design">
+                    <input type="checkbox" id="feat-design" name="features" value="design"> Design
+                </label>
+            </fieldset>
+
+            <div class="form-section">
+                <label for="written-review">Written Review (Optional)</label>
+                <textarea id="written-review" name="written-review" rows="6"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label for="user-name">Your Name (Optional)</label>
+                <input type="text" id="user-name" name="user-name">
+            </div>
+
+            <div class="form-footer">
+                <input type="submit" value="Post Review" id="submit-btn">
+            </div>
+
+        </form>
+    </main>
+
+
+     <footer>
+        <p class="copyright">&copy;<span id="currentyear"></span> &#x1f468;&#x200d;&#x1f4bb; Baguidy Mardochee &#x1f468;&#x200d;&#x1f4bb; Port-au-Prince, Haiti</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
