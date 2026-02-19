@@ -168,19 +168,19 @@ main {
         order: 2;
     }
 
-    /* THE GRID UPDATE: 1 Column on Mobile */
+    /* 1 Column on Mobile */
     #brand-display-area {
         grid-template-columns: 1fr; 
         gap: 20px;
     }
 
     #brand-display-area div {
-        height: auto; /* Allow height to adjust for content */
+        height: auto; 
         min-height: 400px;
     }
 }
 
-/* --- 6. FOOTER --- */
+/* 6. FOOTER */
 footer {
     text-align: center;
     background-color: var(--header-footer);
