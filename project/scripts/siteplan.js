@@ -206,5 +206,23 @@ document.getElementById("Vegan").addEventListener("click", () => {
     displayBrands(veganBrands);
 });
 
+// Saving the filter preference
+document.getElementById("Vegan").addEventListener("click", () => {
+    const veganBrands = creatineBrands.filter(b => b.vegan === true);
+    displayBrands(veganBrands);
+    localStorage.setItem("lastFilter", "Vegan"); 
+});
+
+// On page load, check for a saved filter
+window.addEventListener('DOMContentLoaded', () => {
+    const savedFilter = localStorage.getItem("lastFilter");
+    if (savedFilter === "Vegan") {
+        const veganBrands = creatineBrands.filter(b => b.vegan === true);
+        displayBrands(veganBrands);
+    } else {
+        displayBrands(creatineBrands);
+    }
+});
+
 // Initialize page with all brands
 displayBrands(creatineBrands);

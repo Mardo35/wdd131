@@ -1,54 +1,53 @@
+
 /* Global Reset & Settings */
-/*  fromhttps://www.joshwcomeau.com/css/custom-css-reset/ */
 *, *::before, *::after {
     box-sizing: border-box; 
 }
 
 :root {
-    --header-footer:  #222;
+    --header-footer: #222;
     --main-content: #f8f9fa;
     --text: #333;
     --background: #ffb7c5;
     --background-hover: #ff69b4;
+    --accent-blue: #00d4ff;
+    --myth-orange: #e67e22;
 }
 
-/* styling for the body */
+/* Styling for the body */
 body {
-    font-family: 'cormorant';
+    font-family: 'Cormorant', serif;
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden
-
+    min-height: 100vh; /* Changed from height to min-height to allow scrolling */
+    overflow-x: hidden;
+    background-color: var(--main-content);
+    color: var(--text);
 }
 
-/* Styling the header */
+/* --- HEADER & NAVIGATION --- */
 
 header {
     background-color: var(--header-footer);
     color: var(--main-content);
     width: 100%;
-    padding: 1.5rem;
-
 }
 
-/* 3. The Nav is the Flex Container */
 nav.list {
     display: flex;
     justify-content: space-between; 
     align-items: center;           
     padding: 10px 40px;
+    width: 100%;
 }
 
-/* 4. Style the Logo/Text */
 nav.list p {
     margin: 0;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-/* 5. Style the Link List */
 nav.list ul {
     display: flex;
     list-style: none;
@@ -57,104 +56,33 @@ nav.list ul {
     gap: 20px; 
 }
 
+/* Specificity fix: Ensure nav LIs don't inherit the white box style */
+nav.list ul li {
+    background: transparent;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
 nav.list ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding: 1.5rem;
+    padding: 1.8rem;
+    display: block;
 }
 
-/* Hover Effect */
 nav.list ul li a:hover {
-    color: #00d4ff; 
+    color: var(--accent-blue); 
 }
 
-/* 1. Desktop Layout (Default) */
-nav.list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    width: 100%;
-}
-
-nav.list ul {
-    display: flex; 
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/*Desktop  */
-
-nav.list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    width: 100%;
-}
-
-/* Ensure links are a row on desktop */
-nav.list ul {
-    display: flex; 
-    flex-direction: row; 
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Logo text is always visible on desktop */
-nav.list p {
-    display: block !important; 
-    margin: 0;
-}
-
-/* Hide hamburger on desktop */
 .hamburger-btn {
-    display: none; 
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
 }
 
-/* 2. Mobile Styles (Only for screens 768px and below) */
+/* --- IMAGES --- */
 
-@media (max-width: 768px) {
-    nav.list {
-        flex-wrap: wrap; 
-        padding: 15px 20px;
-    }
-
-    /* Logic for the "Optimal Health" text visibility */
-    nav.list p.hide-text {
-        display: none !important;
-    }
-
-    /* Mobile menu resets */
-    nav.list ul {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-        order: 3; /* Move below logo and button */
-    }
-
-    /* Class added by JavaScript to show the menu */
-    nav.list ul.show {
-        display: flex;
-    }
-
-    /* Show the hamburger button only on mobile */
-    .hamburger-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        order: 2;
-    }
-}
-
-/* styling the image */
 .creatine-image {
     width: 100%;       
     overflow: hidden;  
@@ -168,43 +96,136 @@ nav.list p {
     object-fit: cover; 
 }
 
-/* centered the main section with the texts */
+/* --- MAIN CONTENT --- */
+
 main {
-    width: 90%;       /* Takes up 90% of the screen on mobile */
-    max-width: 500px; /* Won't grow larger than 500px on desktop */
-    margin: 0 auto;   /* Keeps it centered */
+    width: 95%;      
+    max-width: 800px; /* Increased for better readability of tables */
+    margin: 40px auto;
+    text-align: left; 
 }
-.main-text{
+
+.main-text {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-/* shrink the text */
+h2 {
+    margin-top: 2rem;
+}
+
+/* Targeted List Styling: Only affects lists inside <main> */
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+main ul li strong {
+    color: var(--myth-orange); 
+}
+
+/* --- TABLE STYLING --- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+th {
+    background-color: var(--header-footer);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- FOOTER --- */
+
+footer {
+    text-align: center;
+    background-color: var(--header-footer);
+    padding: 1.5rem;
+    color: var(--main-content);
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.date, #lastModified {
+    display: inline; 
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
 @media (max-width: 768px) {
+    nav.list {
+        padding: 15px 20px;
+    }
+
+    nav.list p.hide-text {
+        display: none;
+    }
+
+    nav.list ul {
+        display: none; /* Hide for JS toggle */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        order: 3;
+    }
+
+    nav.list ul.show {
+        display: flex;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        order: 2;
+    }
+
+    .creatine-image img {
+        height: 350px; 
+    }
+
     .main-text {
         font-size: 1.8rem; 
     }
 }
 
-/* image too long on small screen */
-@media (max-width: 768px) {
-    .creatine-image img {
-        height: 300px; /* Reduced height for better mobile viewing */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
     }
 }
-
-
-main {
-  text-align: left; 
-
-}
-
-h1,h2, p {
-  margin-left: 0;   
-}
-
-
 /* Styling the footer */
 
 footer {
