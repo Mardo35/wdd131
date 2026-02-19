@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join Optimal heatlth to receive science-backed advices and supplement recommendations from top-notch experts. ">
+<meta name="author" content="Baguidy Mardochee">
+<link rel="stylesheet" href="styles/sign-up.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<title>Join Optimal Health</title>
+<script src="scripts/siteplan.js" defer> </script>
+</head>
+<body>
+<header>
+  <nav class="list">
+    <p>Optimal health</p>
+    <ul class="list-links">
+      <li><a href="siteplan.html">Home</a></li>
+      <li><a href="sign-up.html">Sign up</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="recommended.html">Recommended</a></li>
+    </ul>
+    <button id="hamburger-btn" class="hamburger-btn">
+      &#9776;
+    </button>
+  </nav> 
+</header>
+
+    <main>
+        <section id="signup-container">
+            <div class="header">
+                <h1>Take Charge of Your Health and man up!</h1>
+                <p>Join 100,000+ men receiving science-backed and personalized supplement advices to level up in their lives</p>
+
+            </div>
+
+            <form action="/submit-signup" method="POST">
+                <fieldset>
+                    <legend>Account Information</legend>
+                    
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Baguidy Mardochee" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="mardocheebaguidy106@gmail.com" required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Health Goals</legend>
+                    <p>Select your primary goals (optional):</p>
+                    
+                    <label>
+                        <input type="checkbox" name="goal" value="energy"> Energy & Focus
+                    </label>
+                    <label>
+                        <input type="checkbox" name="goal" value="muscle"> Muscle Recovery 
+                    </label>
+                    <label>
+                        <input type="checkbox" name="goal" value="sleep"> Better Sleep & Hormones balance
+                    </label>
+                    <label>
+                        <input type="checkbox" name="goal" value="longevity"> Longevity & Vitality
+                    </label>
+                </fieldset>
+
+                <p class="disclaimer">
+                    <small>By signing up, you agree to our Terms of Service. Please consult with a healthcare professional before starting any new supplement regimen.</small>
+                </p>
+
+                <button type="submit">Commenc My Transformation</button>
+            </form>
+
+    </main>
+       
+
+    <footer>
+        <p class="copyright">&copy;<span id="currentyear"></span> &#x1f468;&#x200d;&#x1f4bb; Optimal Health &#x1f468;&#x200d;&#x1f4bb; all rights reserved.</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
