@@ -20,7 +20,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    min-height: 100vh; /* Changed from height to min-height to allow scrolling */
+    min-height: 100vh; 
     overflow-x: hidden;
     background-color: var(--main-content);
     color: var(--text);
@@ -100,7 +100,7 @@ nav.list ul li a:hover {
 
 main {
     width: 95%;      
-    max-width: 800px; /* Increased for better readability of tables */
+    max-width: 800px; 
     margin: 40px auto;
     text-align: left; 
 }
